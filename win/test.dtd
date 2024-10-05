@@ -1,0 +1,4 @@
+<!ELEMENT test (a,text2,text3)>
+<!ELEMENT a (#PCDATA)>
+<!ELEMENT text2 (#PCDATA)>
+<!ELEMENT text3 (#PCDATA)>

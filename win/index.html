@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function ondoc(){
+            const xhttp=new XMLHttpRequest();
+            xhttp.onload = function(){
+                document.getElementById("demo").innerHTML=this.responseText;
+            }
+            xhttp.open("GET","ajaxa.txt");
+            xhttp.send();
+        }
+        $(document).ready(function(){
+        $('#p1').hover(function(){
+            alert('mouse up over p');
+        })});
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="p1"> LET AJAX CHANGE THIS TEXT</p>
+        <button type="button" onclick="ondoc()">Change content</button>
+    </div>
+    <div> 
+        <label for="select">State</label>
+        <select id="select">
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option selected>uttarpradesh</option>
+            <option>kerela</option>
+        </select>
+    </div>
+    <div>
+        <input type="checkbox" name="subject" >maths
+        <input type="checkbox" name="subject" checked >english
+        <input type="checkbox" name="subject">hindi
+    </div>
+    <div> <input type="radio" name="rad" checked>male
+        <input type="radio" name="rad" >female
+    </div>
+    <div>
+        <label for="fname">First name  </label>
+        <input type="text" id="fname">
+    </div>
+    
+</body>
+</html>

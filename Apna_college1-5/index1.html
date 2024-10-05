@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form validation</title>
+    <script >
+
+        function seterror(id,error)
+        {// sets errror inside tag of id
+
+        }
+
+        function validateform()
+        {
+            var name= doucument.forms['myForm']['fname'].values;
+            console.log(name);
+            return false;
+        }
+    </script>
+
+
+    <style>
+        body{
+            padding:10px 50px;
+        }
+        .formdesign{
+            font-size:20px;
+        }
+        .formdesign input{
+            width:50%;
+            padding:12px 20px;
+            border:1px solid blue;
+            margin:14px;
+            border-radius:4px;
+            font-size:15px;
+        }
+        .formerror{
+            color:red;
+        }
+        .but{
+            border-radius:16px;
+            width:100px;
+            height:50px;
+            font-size:25px;
+            margin: 22px 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1> Welcome to the best form on internet</h1>
+    <form action="Myaction.php" name="myForm" onsubmit="return validateform()" method="post">
+        <div class="formdesign" id="name">
+            Name :  <input type="text" name="fname"> <b><span class="formerror"> </span></b>
+        </div>
+        <div class="formdesign" id="email">
+            Email :  <input type="text" name="fname"> <b><span class="formerror"> </span></b>
+        </div>
+        <div class="formdesign" id="phone">
+            Phone :  <input type="text" name="fname"> <b><span class="formerror"> </span></b>
+        </div>
+        <div class="formdesign" id="password">
+            Password :  <input type="password" name="fname"> <b><span class="formerror"> </span></b>
+        </div>
+        <div class="formdesign" id="cpassword">
+            confirm password :  <input type="password" name="fname"> <b><span class="formerror">r</span></b>
+        </div>
+        <input type="submit" class="but">
+    </form>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello");
+        function display(event){
+           let name= document.querySelector('#name');
+           let mob= document.querySelector('#mob');
+           let div= document.querySelector('#result');
+           div.innerText="Name entered is"+name.value+" mob is "+mob.value;
+           let a=10;
+           console.log(name.value);
+           console.log(mob);
+
+           event.preventDefault();
+        }
+
+        function chkyear(){
+            let year=document.getElementById('year');
+            let y=year.value
+            if(y%100!=0 && (y%4==0 || y%400==0)){
+                console.log("it is a leap year");
+            }
+            else{
+                console.log("not a leap year");
+            }
+        }
+
+
+        function rev(){
+            let str=document.getElementById('rev1').value.split(' ');
+            console.log(str);
+            for (v in str){
+                let newv=str[v].split("").reverse();
+                str[v]=newv.join("");
+            }
+            str=str.join(" ");
+            console.log(str);
+        }
+
+const date=new Date();
+const cdate='25 12 2024'.split(" ");
+console.log(date.getMonth());
+// console.log(cdate)
+let years=cdate[2]-date.getFullYear()
+let months=cdate[1]-date.getMonth()
+console.log(years);
+console.log(months);
+
+    </script>
+</head>
+<body>
+    <!-- <form onsubmit="display()">
+        <div style="margin-top:40px;">Name:<span><input type="text" id="name" value="name"></span></div>
+        <div style="margin:20px 0 20px 0;">Mob:<span><input type="text" id="mob"></span></div>
+        <div id="result">result</div>
+         <button type="submit" onclick="display()" value="submit">submit</button> -->
+        <!-- <input type="submit" value="submit" onlcick="display"> -->
+    <!-- </form> -->
+    <div>Enter the year to check whether it is a leap year or not</div>
+    <input type="text" id="year">
+    <input type="submit" id="submit" onclick="chkyear()"><br>
+        <input type="text" placeholder="Enter the string to reverse" id="rev1">
+    <input type="submit"  onclick="rev()">
+
+
+    
+</body>
+</html>

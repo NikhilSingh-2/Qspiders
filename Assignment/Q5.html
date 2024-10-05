@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Validation</title>
+    <style>
+        /* CSS styles */
+        #error-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Validation</h1>
+    <form id="input-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="payment-mode">Mode of Payment:</label>
+        <select id="payment-mode" name="payment-mode" required>
+            <option value="">Select</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+        </select><br><br>
+
+        <label for="credit-card">Credit Card:</label>
+        <input type="text" id="credit-card" name="credit-card" required><br><br>
+
+        <button type="button" id="validate-btn">Validate</button>
+    </form>
+
+    <div id="error-message"></div>
+
+    <script src="script5.js"></script>
+</body>
+</html>

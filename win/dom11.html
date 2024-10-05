@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+
+<input type="radio" name="r" onchange="changecase('upper')">UPPER CASE
+<input type="radio" name="r" onchange="changecase('lower')" checked>LOWER CASE
+<p id="para" onmouseover="mouseover(this)" onmouseout = "mouseout()">jksdhf jd jh sdjfhsk fl jsdhfjsd fjksksdkjfh sdjfj sdjkfjsdkds</p>
+<script>
+var para = document.getElementById("para")
+function changecase(val){
+	
+	if(val == "upper"){
+		para.style.textTransform= "uppercase";
+	} else {
+		para.style.textTransform= "lowercase";
+	}
+	
+}
+
+function mouseover(){
+	para.style.color = "red";
+}
+
+function mouseout(){
+	para.style.color = "black";
+}
+
+</script>
+
+</body>
+</html>

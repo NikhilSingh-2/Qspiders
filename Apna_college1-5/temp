@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Selection Dropdown</title>
+</head>
+<body>
+
+<form>
+  <label for="options">Select Options:</label><br>
+  <select id="options" name="options" multiple>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+    <option value="Option 4">Option 4</option>
+    <option value="Option 5">Option 5</option>
+  </select><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

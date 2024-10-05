@@ -1,0 +1,73 @@
+<html>
+<style>
+
+	#btn{
+	
+	}
+	
+	.abc{
+	
+		font-size:40px;
+	}
+</style>
+<body>
+
+<button id="btn" class="abc"> click me</button>
+<p id="para">Welcome</p>
+
+
+<script>
+	
+	var btn = document.getElementById("btn")
+	btn.onclick = function(){
+		var para = document.getElementById("para");
+		para.innerHTML = "Welcome to the University";
+		document.body.style.background = "red";
+	}
+
+/*
+
+	var case1 = 1;
+	setInterval(function(){
+		var para = document.getElementById("para");
+		
+		if(case1 == 1)
+		{
+			case1= 2;
+			para.style.textTransform ="uppercase";
+		} 
+		else 
+		{
+			case1 = 1;
+			para.style.textTransform ="lowercase";
+		
+		}
+		
+	},15000)
+*/
+
+
+	var case1 = 1;
+	setInterval(function(){
+	
+		var para = document.getElementById("para");
+		
+		if(case1 == 1)
+		{
+			case1= 2;
+			para.innerHTML = para.innerHTML.toUpperCase();
+		} 
+		else 
+		{
+			case1 = 1;
+			para.innerHTML = para.innerHTML.toLowerCase();
+		
+		}
+	},15000)
+
+
+</script>
+
+
+</body>
+</html>

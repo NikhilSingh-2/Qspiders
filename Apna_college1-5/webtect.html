@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="webt1.css"> -->
+    <style>
+        h4{color: mediumaquamarine !important; }
+        div.personal{
+            border: 2px solid rgba(0, 0, 0, 0.129);
+            border-radius: 5px;
+            margin-left:6px;
+            padding-left:8px;
+
+        }
+        div.Academic{
+            border: 2px solid rgba(0, 0, 0, 0.129);
+            border-radius: 5px;
+            margin-left:6px;
+            padding-left:8px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <h2 style="color: rgb(119, 119, 189);">Registration Form</h2> 
+       <form name="myform" onsubmit="return myfun()" >
+        <div class="personal"><h4 >Personal Details</h4>
+        <label for="fname">First Name</label> : <input type="text" id="fname" placeholder="enter first name..." required><br><br>
+  <label for="lname">  Last Name </label>: <input type="text" id="lname" placeholder="enter last name.."><br><br>
+  <label for="email">Email : <input type="text" id="email" name="Email" placeholder="enter your email-id @.com" required><span id="msg"></span> </label><br><br>
+         <label for="dob"> Dob :</label> <input id="dob" type="date" min="2000-01-01" max="2015-12-31"><br><br> </div>
+          <br><br>
+         
+         <div class="Academic"><h4>Academic Details</h4>
+         High school : <input id="high" type="text" placeholder="enter 10th percentage..."><br><br>
+         Senior secondary school : <input id="sss" type="text" placeholder="enter 12th percentage...."><br><br>
+      <label for="university">   Graduation(University)</label> : <select id="university">
+          <option>IPU</option>
+        <option>DU</option>
+        <option>JNU</option>
+        <option>Ignou</option>
+    </select><br><br>    
+    </div><br>
+    <input type="submit" id="submit" class="submit" value="Register">
+     </form>
+    </div>
+    <script>
+      function myfun()
+      {
+        var a =document.myform.Email.value;
+        if(a.indexOf('@')<=0)
+        {
+            document.getElementById("msg").innerHTML="--Invalid @ position--";
+            return false;
+        }
+        if(a.charAt(a.length-4)!='.' && a.charAt(a.length-3!='.')){
+            document.getElementById("msg").innerHTML="--Invalid . position--";
+            return false;
+        }
+      }
+       
+    </script>
+</body>
+</html>

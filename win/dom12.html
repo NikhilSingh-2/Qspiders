@@ -1,0 +1,30 @@
+<html>
+<body>
+
+
+<button id="btn">open new window</button>
+<br>
+<script>
+
+
+	var dat = new Date();
+	document.write(dat+"<br>");
+	document.write(dat.toLocaleString()+"<br>");
+	document.write(dat.toLocaleDateString()+"<br>");
+	document.write(dat.toLocaleTimeString()+"<br>");
+	document.write("<br>"+dat.getYear()+1900+"<br>");
+	document.write("<br>"+(dat.getMonth()+1+"<br>"));
+	document.write("<br>"+dat.getDay()+"<br>");
+	document.write("<br>"+dat.getSeconds());
+
+
+
+	var button = document.getElementById("btn");
+	button.onclick = function(){
+		window.open("https://google.com")
+	}
+
+</script>
+
+</body>
+</html>

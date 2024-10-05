@@ -1,0 +1,28 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BankForm.aspx.cs" Inherits="BankForm" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bank Account Form</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <label>Name of the depositor:</label>
+            <asp:TextBox ID="txtName" runat="server"></asp:TextBox><br />
+            <label>Account Number:</label>
+            <asp:TextBox ID="txtAccountNumber" runat="server"></asp:TextBox><br />
+            <label>Type of Account:</label>
+            <asp:DropDownList ID="ddlAccountType" runat="server">
+                <asp:ListItem Value="Savings">Savings</asp:ListItem>
+                <asp:ListItem Value="Checking">Checking</asp:ListItem>
+            </asp:DropDownList><br />
+            <label>Balance amount in the account:</label>
+            <asp:TextBox ID="txtBalance" runat="server"></asp:TextBox><br />
+            <asp:Button ID="btnDeposit" runat="server" Text="Deposit" OnClick="btnDeposit_Click" />
+            <asp:Button ID="btnWithdraw" runat="server" Text="Withdraw" OnClick="btnWithdraw_Click" />
+        </div>
+    </form>
+</body>
+</html>

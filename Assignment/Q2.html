@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Information</h2>
+    <table id="productTable">
+        <tr>
+            <th>PID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Weight</th>
+        </tr>
+    </table>
+
+    <script>
+        var products = [
+            { PID: "1001", PName: "Product 1", PPrice: 50, PWeight: 10 },
+            { PID: "1002", PName: "Product 2", PPrice: 70, PWeight: 15 },
+            { PID: "1003", PName: "Product 3", PPrice: 100, PWeight: 20 }
+        ];
+
+        // Populate table
+        var table = document.getElementById("productTable");
+
+        for (var i = 0; i < products.length; i++) {
+            var product = products[i];
+            
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.innerHTML = product.PID;
+            cell2.innerHTML = product.PName;
+            cell3.innerHTML = product.PPrice;
+            cell4.innerHTML = product.PWeight;
+        }
+    </script>
+</body>
+</html>

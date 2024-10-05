@@ -1,0 +1,15 @@
+h1{
+    color:blue;
+    text-decoration:underline;
+    background-color: yellow;
+
+}
+button{
+    color:hotpink;
+    background-color: lightgreen;
+    border-radius: 8px;
+}
+
+#hide{
+    visibility: hidden;
+}

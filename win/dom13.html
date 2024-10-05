@@ -1,0 +1,30 @@
+<html>
+<body>
+
+
+<button id="btn">get data other file</button>
+<div id="data">aaaaaaa</a>
+<script>
+
+
+
+
+	var button = document.getElementById("btn");
+	button.onclick = function(){
+		
+		var http = new XMLHttpRequest();
+		
+		http.onreadystatechange = function(val){
+		
+			console.log(val)
+		}
+		http.open("GET","text.txt","")
+		http.send();
+		
+		
+	}
+
+</script>
+
+</body>
+</html>
